@@ -1,0 +1,10 @@
+@import 'src/styles/variables';
+
+.userItem {
+  margin: 5px;
+  padding: 5px;
+  width: 260px;
+  background-color: $second-main-color;
+  color: $first-secondary-color;
+  border-radius: 3px;
+}

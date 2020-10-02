@@ -1,0 +1,17 @@
+@import 'src/styles/variables';
+
+.form {
+  padding: 5px;
+  width: 300px;
+  border: 2px solid $first-main-color;
+  border-radius: 3px;
+  margin: 50px auto;
+}
+
+.factText {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  background-color: #ffedcd;
+}

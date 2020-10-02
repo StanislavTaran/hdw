@@ -1,0 +1,12 @@
+@import 'src/styles/variables';
+
+.button {
+  display: block;
+  margin: 5px auto;
+  background-color: $first-main-color;
+  width: 120px;
+  height: 30px;
+  color: $first-secondary-color;
+  border: none;
+  border-radius: 3px;
+}
