@@ -1,4 +1,4 @@
-import { object, string, number, mixed } from 'yup';
+import { object, string, mixed } from 'yup';
 import { genderValues, loyaltyPrograms } from '../../constants/initialStates';
 
 export const createUserSchema = object().shape({
@@ -12,7 +12,7 @@ export const createUserSchema = object().shape({
     .required('Surname is required'),
   loyaltyProgram: mixed().oneOf(Object.values(loyaltyPrograms)),
   gender: mixed().oneOf(Object.values(genderValues)).required('Gender is required'),
-  cardNumber: number()
-    .min(16, 'Card must be at least 3 characters!')
+  cardNumber: string()
+    .min(16, 'Card must be at least 16 characters!')
     .max(20, 'Card must be no more than 20 characters!'),
 });

@@ -5,9 +5,11 @@ import useGetFact from '../../hooks/useGetFact';
 export default function Page() {
   const { fact } = useGetFact();
 
+  const onCreateUser = values => console.log(values);
+
   return (
     <section>
-      <UserForm fact={fact} />
+      <UserForm fact={fact} onCreateUser={onCreateUser} />
     </section>
   );
 }

@@ -11,6 +11,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { createUserSchema } from '../../helpers/schemas/createUserSchema';
 import { genderValues, loyaltyPrograms } from '../../constants/initialStates';
 
+import InputMask from 'react-input-mask';
+
 const initialState = {
   firstName: '',
   surname: '',
@@ -22,9 +24,7 @@ const initialState = {
 const genderValuesForInput = [['', ''], ...Object.entries(genderValues)];
 const loyaltyProgramsForInput = Object.entries(loyaltyPrograms);
 
-export default function UserForm({ fact = '' }) {
-  const onCreateUser = values => console.log(values);
-
+export default function UserForm({ fact = '', onCreateUser }) {
   return (
     <Formik
       initialValues={initialState}
@@ -72,16 +72,19 @@ export default function UserForm({ fact = '' }) {
           {values && values.loyaltyProgram === loyaltyPrograms.card && (
             <>
               <Label htmlFor="cardNumber" text="Card number : ">
-                <Input
-                  type="text"
-                  name="cardNumber"
-                  placeholder="Enter card number."
+                <InputMask
+                  mask="9999 9999 9999 9999"
+                  maskChar={null}
                   value={values.cardNumber}
                   error={errors.cardNumber}
                   touched={touched.cardNumber}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                />
+                >
+                  {inputProps => (
+                    <Input type="text" name="cardNumber" placeholder="Enter card number." {...inputProps} />
+                  )}
+                </InputMask>
               </Label>
               {errors.cardNumber && touched.cardNumber ? <ErrorLabel text={errors.cardNumber} /> : null}
             </>

@@ -12,6 +12,7 @@ export default function Input({ value, name, type, onChange, onBlur, placeholder
       onChange={onChange}
       onBlur={onBlur}
       placeholder={placeholder}
+      autoComplete="off"
       {...props}
     />
   );
@@ -21,8 +22,8 @@ Input.propTypes = {
   placeholder: T.string,
   name: T.string.isRequired,
   type: T.string.isRequired,
-  value: T.string.isRequired,
-  onChange: T.func.isRequired,
-  onBlur: T.func.isRequired,
+  value: T.string,
+  onChange: T.func,
+  onBlur: T.func,
   props: T.object,
 };
