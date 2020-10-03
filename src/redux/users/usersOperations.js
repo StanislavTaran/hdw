@@ -26,6 +26,6 @@ export const createUser = user => dispatch => {
     })
     .catch(e => {
       dispatch(usersActions.createUserError(e));
-      toastr.error('Something went wrong');
+      toastr.error('Something went wrong', 'Please refresh page');
     });
 };
