@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getFact } from '../redux/facts/factsSelectors';
-import { fetchFact } from '../redux/facts/factsOperations';
+import { getFact } from '../../redux/facts/factsSelectors';
+import { fetchFact } from '../../redux/facts/factsOperations';
 
 const useGetFact = () => {
   const dispatch = useDispatch();

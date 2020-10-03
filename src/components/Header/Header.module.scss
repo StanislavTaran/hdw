@@ -1,42 +1,31 @@
 @import '../../styles/variables';
 
+.menuButton {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: none;
+  background-color: inherit;
+  height: 70px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .header {
   height: 80px;
   background-color: $second-main-color;
   padding: 0 8px;
+  position: relative;
   display: flex;
-  justify-content: space-between;
-}
-
-.logo {
-  color: $first-secondary-color;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-  line-height: 80px;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .link {
+  display: block;
+  vertical-align: center;
   text-decoration: none;
-}
-.navLink {
-  composes: logo;
-  text-decoration: none;
-  padding: 0 5px;
-}
-
-.activeNavLink {
-  color: $first-main-color;
-}
-
-.navLinkWithBorder {
-  composes: navLink;
-  border: 1px solid $first-secondary-color;
-  border-radius: 3px;
-}
-
-.activeNavLinkWithBorder {
-  composes: navLink;
-  border: 1px solid $first-main-color;
-  border-radius: 3px;
+  color: $first-secondary-color;
 }

@@ -1,0 +1,25 @@
+@import 'src/styles/variables';
+
+@mixin block {
+  min-width: 280px;
+}
+
+.mainInfoBlock {
+  @include block;
+  margin: 10px 0;
+  padding: 5px;
+  border: 2px solid $second-main-color;
+}
+
+.myPhoto {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

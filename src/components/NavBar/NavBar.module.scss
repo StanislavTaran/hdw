@@ -1,0 +1,28 @@
+@import 'src/styles/variables';
+.navBar {
+  width: 240px;
+  height: 100%;
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: $second-main-color;
+}
+
+@mixin link {
+  color: $first-secondary-color;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+}
+
+.navLink {
+  @include link;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+.activeNavLink {
+  color: $first-main-color;
+  text-decoration: underline;
+}

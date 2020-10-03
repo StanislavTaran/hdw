@@ -7,7 +7,6 @@ import Select from '../common/Select/Select';
 import Label from '../common/Label/Label';
 import ErrorLabel from '../common/ErrorLabel/ErrorLabel';
 import styles from './UserForm.module.scss';
-import { v4 as uuidv4 } from 'uuid';
 import { createUserSchema } from '../../helpers/schemas/createUserSchema';
 import { genderValues, loyaltyPrograms } from '../../constants/initialStates';
 
@@ -17,7 +16,7 @@ const initialState = {
   firstName: '',
   surname: '',
   gender: '',
-  loyaltyProgram: loyaltyPrograms[0],
+  loyaltyProgram: loyaltyPrograms['unavailable'],
   cardNumber: '',
 };
 
@@ -29,8 +28,12 @@ export default function UserForm({ fact = '', onCreateUser }) {
     <Formik
       initialValues={initialState}
       validationSchema={createUserSchema}
-      onSubmit={values => {
-        onCreateUser({ ...values, id: uuidv4(), createdAt: Date.now() });
+      onSubmit={(values, { setStatus, setSubmitting, resetForm }) => {
+        onCreateUser(values).then(res => {
+          setSubmitting(false);
+          setStatus('sent');
+          resetForm();
+        });
       }}
     >
       {({ errors, touched, values, isSubmitting, handleSubmit, handleChange, handleBlur, handleReset }) => (

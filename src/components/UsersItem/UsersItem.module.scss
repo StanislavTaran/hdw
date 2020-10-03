@@ -4,7 +4,17 @@
   margin: 5px;
   padding: 5px;
   width: 260px;
-  background-color: $second-main-color;
-  color: $first-secondary-color;
+  border: 2px solid $second-main-color;
   border-radius: 3px;
+}
+
+.labelTitle {
+  font-style: italic;
+}
+
+.avatar {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  margin: 0 auto;
 }

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
 import * as usersActions from './usersActions';
-import { usersInitialState } from '../../constants/initialStates';
 
-const users = createReducer(usersInitialState, {
+const users = createReducer([], {
   [usersActions.createUserSuccess]: (state, action) => [...state, action.payload],
+  [usersActions.fetchUsersSuccess]: (state, action) => action.payload,
 });
 
 const error = createReducer('', {
