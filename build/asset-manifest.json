@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/hdw/static/css/main.c3346d71.chunk.css",
+    "main.js": "/hdw/static/js/main.a588965c.chunk.js",
+    "main.js.map": "/hdw/static/js/main.a588965c.chunk.js.map",
+    "runtime-main.js": "/hdw/static/js/runtime-main.9e87737f.js",
+    "runtime-main.js.map": "/hdw/static/js/runtime-main.9e87737f.js.map",
+    "static/css/2.a866c86c.chunk.css": "/hdw/static/css/2.a866c86c.chunk.css",
+    "static/js/2.e5e8a748.chunk.js": "/hdw/static/js/2.e5e8a748.chunk.js",
+    "static/js/2.e5e8a748.chunk.js.map": "/hdw/static/js/2.e5e8a748.chunk.js.map",
+    "index.html": "/hdw/index.html",
+    "precache-manifest.d2fda522a655f771181c017d7555ffb2.js": "/hdw/precache-manifest.d2fda522a655f771181c017d7555ffb2.js",
+    "service-worker.js": "/hdw/service-worker.js",
+    "static/css/2.a866c86c.chunk.css.map": "/hdw/static/css/2.a866c86c.chunk.css.map",
+    "static/css/main.c3346d71.chunk.css.map": "/hdw/static/css/main.c3346d71.chunk.css.map",
+    "static/js/2.e5e8a748.chunk.js.LICENSE.txt": "/hdw/static/js/2.e5e8a748.chunk.js.LICENSE.txt",
+    "static/media/menu.svg": "/hdw/static/media/menu.dcb0d01f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9e87737f.js",
+    "static/css/2.a866c86c.chunk.css",
+    "static/js/2.e5e8a748.chunk.js",
+    "static/css/main.c3346d71.chunk.css",
+    "static/js/main.a588965c.chunk.js"
+  ]
+}
