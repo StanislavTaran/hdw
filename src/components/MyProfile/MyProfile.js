@@ -1,7 +1,7 @@
 import React from 'react';
 import Paragraph from '../common/Paragraph/Paragraph';
 import styles from './MyProfile.module.scss';
-import photo from '../../images/user.jpg';
+import photo from '../../images/myPhoto.PNG';
 
 export default function MyProfile() {
   return (
